@@ -1,0 +1,15 @@
+{
+  "name": "play",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github-me:nenadknezevic/play.git",
+  "author": "Nenad Knezevic <nknezevic@surrey.ca>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.15.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-preset-env": "1.3.3"
+  }
+}
