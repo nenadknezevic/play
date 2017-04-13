@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "repository": "git@github-me:nenadknezevic/play.git",
-  "author": "Nenad Knezevic <nknezevic@surrey.ca>",
+  "author": "Nenad Knezevic <nele50@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "express": "4.15.2"
