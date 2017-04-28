@@ -3,10 +3,7 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const mySchema = new Schema({ x: String })
-const X = mongoose.model('mycollection', mySchema)
-
-const newSchema = new Schema({ y: String })
-const Y = mongoose.model('mynewthing', newSchema)
+const X = mongoose.model('mything', mySchema)
 
 function getX(req, res) {
   X.findOne({}, 'x', (err, thing) => {
@@ -16,14 +13,11 @@ function getX(req, res) {
   })
 }
 
-function makeY(req, res) {
-  Y.findOne({}, 'y', (err) => {
-    console.log(err)
-    const y = new Y({ y: 'something dark side' })
-    y.save((e) => {
-      console.log(e)
-      res.send('created successfully')
-    })
+function makeX(req, res) {
+  const x = new X({ x: 'something dark side' })
+  x.save((e) => {
+    console.log(e)
+    res.send('created successfully')
   })
 }
 
@@ -35,4 +29,4 @@ function deleteDb(req, res) {
   })
 }
 
-export default { getX, makeY, deleteDb }
+export default { getX, makeX, deleteDb }

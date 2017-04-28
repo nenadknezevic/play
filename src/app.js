@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   res.send('It\'s alive!')
 })
 router.get('/x', store.getX)
-router.get('/y', store.makeY)
+router.get('/make', store.makeX)
 router.get('/delete', store.deleteDb)
 
 app.use('/', router)
