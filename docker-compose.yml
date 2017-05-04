@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  play:
+    build: .
+    ports:
+      - 3000:3000
+  mongo:
+    image: mongo
