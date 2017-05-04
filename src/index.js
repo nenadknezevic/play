@@ -1,9 +1,14 @@
-import express from 'express'
+import mongoose from 'mongoose'
 
-const app = express()
+import config from './config'
+import app from './app'
 
-app.get('/', (req, res) => {
-  res.send('Yo!')
+mongoose.connect(config.mongoUrl)
+mongoose.connection.on('error', () => {
+  console.log('cannot connect!')
+})
+mongoose.connection.on('open', () => {
+  console.log('db connection is open')
 })
 
 app.listen(3000, () => {
