@@ -1,3 +1,3 @@
 export default {
-  mongoUrl: 'mongodb://localhost/test',
+  mongoUrl: 'mongodb://172.17.0.2/test',
 }
