@@ -6,6 +6,8 @@
   "author": "Nenad Knezevic <nele50@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "docker-compose up -d --build",
+    "stop": "docker-compose down",
     "start:dev": "nodemon src/index --exec babel-node",
     "lint": "node_modules/.bin/eslint ."
   },
